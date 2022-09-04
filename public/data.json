@@ -1,0 +1,16 @@
+{
+  "programs": [
+    {
+      "id": "90140000-00D1-0409-1000-0000000FF1CE",
+      "name": "Microsoft Access database engine 2010 (English)",
+      "exe": "AccessDatabaseEngine_X64.exe",
+      "arguments": "/passive /quiet /norestart"
+    },
+    {
+      "id": "ad8a2fa1-06e7-4b0d-927d-6e54b3d31028",
+      "name": "Microsoft Visual C++ 2005 Redistributable (x64)",
+      "exe": "VCredist\\vcredist_2005_x64.exe",
+      "arguments": "/q"
+    }
+  ]
+}
