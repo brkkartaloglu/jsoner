@@ -1,5 +1,5 @@
 # jsoner
-Basic react application for genarating json file from selected inputs. Made for creating templates to use in devops line.
+Basic react page for genarating json file from selected inputs. Made for creating templates to use in devops line.
 
 npm install
 npm start
