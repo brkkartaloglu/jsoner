@@ -1,0 +1,88 @@
+{
+  "programs": [
+    {
+      "id": "90140000-00D1-0409-1000-0000000FF1CE",
+      "name": "Microsoft Access database engine 2010 (English)",
+      "exe": "AccessDatabaseEngine_X64.exe",
+      "arguments": "/passive /quiet /norestart"
+    },
+    {
+      "id": "ad8a2fa1-06e7-4b0d-927d-6e54b3d31028",
+      "name": "Microsoft Visual C++ 2005 Redistributable (x64)",
+      "exe": "VCredist\\vcredist_2005_x64.exe",
+      "arguments": "/q"
+    },
+    {
+      "id": "65e650ff-30be-469d-b63a-418d71ea1765",
+      "name": "Microsoft Visual C++ 2019 Redistributable (x86)",
+      "exe": "VCredist\u000bcredist_2019_x86.exe",
+      "arguments": "/install /quiet /norestart"
+    },
+    {
+      "id": "EC5E6282-8A8E-4499-B58A-3BFA4F1A5528",
+      "name": "IBM MQ Server (Installation1)",
+      "exe": "MQServerMSIIBM MQ.msi",
+      "arguments": "/l*v c:\bimIBM_MQ_Server_install.log TRANSFORMS=\"1033.mst\" USEINI=\"N:\toolprogramsMQServer\response.ini\""
+    },
+    {
+      "id": "E59467D9-0345-4E59-9B87-195A282E5D6A",
+      "name": "IBM MQ Client (Installation1)",
+      "exe": "MQClientWindowsMSIIBM MQ.msi",
+      "arguments": "/l*v c:\bimIBM_MQ_Client_install.log TRANSFORMS=\"1033.mst\" AGREETOLICENSE=\"yes\" ADDLOCAL=\"Client\""
+    },
+    {
+      "id": "C79A7EAB-9D6F-4072-8A6D-F8F54957CD93",
+      "name": "Microsoft SQL Server 2008 Native Client",
+      "exe": "sqlncli2008_x64.msi",
+      "arguments": ""
+    },
+    {
+      "id": "CB282CA5-CB3E-4D99-825D-23A2F44BF600",
+      "name": "Microsoft ODBC Driver 11 for SQL Server",
+      "exe": "msodbcsql11_x64.msi",
+      "arguments": "/qn IACCEPTMSSQLCMDLNUTILSLICENSETERMS=YES"
+    },
+    {
+      "id": "EDEA8AB7-7683-4ED2-AA19-E6C078064C0D",
+      "name": "Microsoft WSE 3.0",
+      "exe": "Microsoft_WSE_3.msi",
+      "arguments": "/q /norestart"
+    },
+    {
+      "id": "DCDEC776-BADD-48B9-8F9A-DFF513C3D7FA",
+      "name": "Microsoft ASP.NET MVC 3",
+      "exe": "AspNetMVC4Setup.exe",
+      "arguments": "/q /norestart"
+    },
+    {
+      "id": "037a3c70-cc6a-4ae2-aa0e-70eb68ea81d5",
+      "name": "Microsoft ASP.NET MVC 4",
+      "exe": "AspNetMVC4Setup.exe",
+      "arguments": "/install /q /norestart"
+    },
+    {
+      "id": "631471BE-DEAB-454B-A9AC-CE3EB42C28B3",
+      "name": "Microsoft ASP.NET MVC 4 (WebPages)",
+      "exe": "AspNetWebPages.msi",
+      "arguments": "/quiet /norestart"
+    },
+    {
+      "id": "90140000-00D1-0409-0000-0000000FF1CE",
+      "name": "Microsoft Access database engine 2010 (x86) (English)",
+      "exe": "AccessDatabaseEngine.exe",
+      "arguments": "/passive /quiet /norestart"
+    },
+    {
+      "id": "710f4c1c-cc18-4c49-8cbf-51240c89a1a2",
+      "name": "Microsoft Visual C++ 2005 Redistributable (x86)",
+      "exe": "VCredist\\vcredist_2005_x86.exe",
+      "arguments": "/q"
+    },
+    {
+      "id": "5FCE6D76-F5DC-37AB-B2B8-22AB8CEDB1D4",
+      "name": "Microsoft Visual C++ 2008 Redistributable (x64)",
+      "exe": "VCredist\\vcredist_2008_x64.exe",
+      "arguments": "/q"
+    }
+  ]
+}
