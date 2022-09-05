@@ -8,15 +8,44 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 
 import { MenuProps, useStyles } from "./utils";
-import { Button } from "@material-ui/core";
+import { Box, Button, CircularProgress } from "@material-ui/core";
 
 const Hero = () => {
+  const localURL = "http://localhost:3001";
   const classes = useStyles();
   const [selected, setSelected] = useState([]);
   const [data, setData] = useState(null);
+  let fail = false;
+
   async function fetchData() {
-    const response = await fetch("data.json");
-    setData(await response.json());
+    try {
+      const response = await fetch("data.json");
+      setData(await response.json());
+    } catch (err) {
+      console.log("Hata olustu");
+      fail = true;
+      logData();
+    }
+  }
+
+  async function logData() {
+    if (!fail) {
+      await fetch(`${localURL}/log`, {
+        method: "POST",
+        body: JSON.stringify({
+          logData: `Generated json file for the programs: ${selected} at`,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    } else {
+      await fetch(`${localURL}/log`, {
+        method: "POST",
+        body: JSON.stringify({
+          logData: `Couldn't load the page, control the data.json file under build folder at`,
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
+    }
   }
 
   useEffect(() => {
@@ -53,6 +82,7 @@ const Hero = () => {
         localStorage.setItem("data", JSON.stringify(wd));
         let writ = `{"programs":${localStorage.getItem("data")}}`;
         TextFile(writ);
+        logData();
         setSelected([]);
       }
     };
@@ -120,12 +150,12 @@ const Hero = () => {
             </Button>
             <br></br>
             <Button
-              title="example@domain.com.tr"
+              title="dotnetadmins@isbank.com.tr"
               fullWidth
               variant="contained"
               color="secondary"
               onClick={() =>
-                (window.location = `mailto:example@domain.com.tr?Subject=New Dependency Request&body=Merhaba aşağıda bilgileri verilen programı listeye ekleyebilir misiniz?%0D%0A
+                (window.location = `mailto:dotnetadmins@isbank.com.tr?Subject=New Dependency Request&body=Merhaba aşağıda bilgileri verilen programı listeye ekleyebilir misiniz?%0D%0A
                 Program Adı:%0D%0A
                 Versiyonu:%0D%0A
                 Güncel İndirme Linki:%0D%0A
@@ -141,7 +171,11 @@ const Hero = () => {
       </section>
     );
   } else {
-    return <div>Hata oluştu.</div>;
+    return (
+      <Box sx={{ display: "flex" }}>
+        <CircularProgress />
+      </Box>
+    );
   }
 };
 
