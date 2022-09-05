@@ -1,4 +1,4 @@
-# jsoner
+# jsoner (For backend functionality look at develop branch)
 Basic react page for genarating json file from selected inputs. Made for creating templates to use in devops line.
 
 npm install
