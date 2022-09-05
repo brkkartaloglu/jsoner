@@ -150,12 +150,12 @@ const Hero = () => {
             </Button>
             <br></br>
             <Button
-              title="dotnetadmins@isbank.com.tr"
+              title="example@example.com.tr"
               fullWidth
               variant="contained"
               color="secondary"
               onClick={() =>
-                (window.location = `mailto:dotnetadmins@isbank.com.tr?Subject=New Dependency Request&body=Merhaba aşağıda bilgileri verilen programı listeye ekleyebilir misiniz?%0D%0A
+                (window.location = `mailto:example@example.com.tr?Subject=New Dependency Request&body=Merhaba aşağıda bilgileri verilen programı listeye ekleyebilir misiniz?%0D%0A
                 Program Adı:%0D%0A
                 Versiyonu:%0D%0A
                 Güncel İndirme Linki:%0D%0A
